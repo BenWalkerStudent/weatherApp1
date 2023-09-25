@@ -4,77 +4,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>weather app 1</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header>
-        <img src="img/ABC.jpeg" alt="">
-        <h1>Weather App Project</h3>
-            <nav>
-                <ul>
-                    <li><a href="#">oownjwjwkwhome</a></li>
-                    <li><a href="#">news</a></li>
-                    <li><a href="#">weather</a></li>
-                    <li><a href="#">about</a></li>
-                </ul>
-            </nav>
-    </header>
-    <article>
-        <section>
-            <div>
-                <h2>Starting Your Weather and News Site</h2>
-                <h3>Purpose</h3>
-                <p>The goal of this project is to build a web site that you build completely on your own. Use some of
-                    the skills you've learned from the HTML Cat Photo App project to build a project that will be
-                    improved on via CSS in the coming weeks. You will want to use as much knowledge as you have for your
-                    project so that you're applying all that you've learned and are able to use that information
-                    effectively when creating websites.</p>
+    <section class="weather-section">
+        <div class="page">
+            <h1>LATEST WEATHER</h1>
+            <div class="archive">
+                <article class="article">
+                    <section id="stats">
+                        <div class="summary">
+                            <h2>Weather summary</h2>
+                            <h3 id="five-city"></h3>
+                            <p>Currently: <span id="current-desc"></span></p>
+                            <p>
+                                Tempature:
+                                <span id="current-temp"></span> °F
+                            </p>
+                            <p>Wind Chill: <span id="current-windChill">10</span> °F</p>
+                            <p>Humidity: <span id="current-humid">1000</span>%</p>
+                            <p>Wind Speed: <span id="current-windSpeed">56</span> mph</p>
+                        </div>
+                    </section>
+                    <div>
+                        <img src="img/ABC.jpeg" alt="Random Image" />
+                    </div>
+                </article>
+
+                <!-- 5 day forecast -->
+                <div class="article-five-day">
+                    <article id="forecastContainer">
+                        <h2 id="forecastTitle">5 Day Forecast</h2>
+                        <img src="img/Umbrella.jpg" alt="" class="weatherIcon">
+                        <h3 id="city"></h3>
+                        <div class="flex">
+                            <div class="flex-col">
+                                <span id="dayTitle1" class="col-head"></span>
+                                <img id="weatherIcon1" src="img/Sunny.jpg" class="weatherIcon" />
+                                <br>
+                                <span class="temp-data">
+                                    <span id="data1">50</span>
+                                    <span>°F</span>
+                                </span>
+                            </div>
+                            <div class="flex-col">
+                                <span id="dayTitle2" class="col-head"></span>
+                                <img id="weatherIcon2" src="img/Sunny.jpg" class="weatherIcon" />
+                                <div class="temp-data">
+                                    <span id="data2">49</span>
+                                    <span>°F</span>
+                                </div>
+                            </div>
+                            <div class="flex-col">
+                                <span id="dayTitle3" class="col-head"></span>
+                                <img id="weatherIcon3" src="img/snowy.jpg" class="weatherIcon" />
+                                <div class="temp-data">
+                                    <span id="data3">26</span>
+                                    <span>°F</span>
+                                </div>
+                            </div>
+                            <div class="flex-col">
+                                <span id="dayTitle4" class="col-head"></span>
+                                <img id="weatherIcon4" src="img/thunderStorms.jpg" class="weatherIcon" />
+                                <div class="temp-data">
+                                    <span id="data4">39</span>
+                                    <span>°F</span>
+                                </div>
+                            </div>
+                            <div class="flex-col">
+                                <span id="dayTitle5" class="col-head"></span>
+                                <img id="weatherIcon5" src="img/partlyCloudy.jpg" class="weatherIcon" />
+                                <div class="temp-data">
+                                    <span id="data5">36</span>
+                                    <span>°F</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
             </div>
-            <div>
-                <h2>Current Weather</h2>
-                <h3>When done, you will have created an HTML skeleton layout for your weather news site application with
-                    the following elements...
-                </h3>
-                <ul>
-                    <li>A header tag with the an image and a nav tag contained inside of it.
-                    </li>
-                    <li>In the nav tag include menu links to "home", "news" and "weather" as well as a link to an
-                        "about" menu item. </li>
-                    <li>Article elements with 2 section elements, one for weather, one for news. </li>
-                    <li> With in the "Weather" section have a header for "Latest Weather"
-                    </li>
-                    <li>Have a div element containing a "Weather Summary" </li>
-                    <li> In the Weather Summary have the following information
-                        <ol>
-                            <li>Area the weather is for</li>
-                            <li>Description of the weather</li>
-                            <li>Temperature</li>
-                            <li>Wind Chill</li>
-                            <li>Humidity</li>
-                            <li>Wind Speed</li>
-                        </ol>
-                    </li>
-                    <li>Have 5 day forecast in a separate element below the Weather Summary
-                        <ol>
-                            <li>Include a heading of "5 Day Forecast"</li>
-                            <li>The area the forecast is for</li>
-                            <li>5 days with the day, a image of what the weather is supposed to be and the temperature.
-                            </li>
-                        </ol>
-                    </li>
-                    <li>In the section element for the "News" section have a header for "Latest News"</li>
-                    <li>Have an image element for a leading news story</li>
-                    <li>Below the image element have the news headline with the brief summary of the news story below
-                    </li>
-                    <li>In a separate div element below the leading story have a place for several cards to display
-                        other news stories, each card will need to have a similar set up as the headline news element
-                    </li>
-                </ul>
-            </div>
-        </section>
-        <section></section>
-    </article>
+        </div>
+    </section>
+    <hr />
 </body>
 
 </html>
